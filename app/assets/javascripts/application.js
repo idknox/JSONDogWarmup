@@ -44,13 +44,14 @@ $(document).ready(function () {
       }
     ]
   };
-  $.each(gschoolDogs.dogs, function (i, dog) {
-  $('tbody').append("<tr class='" + dog.owner + "'></tr>")
-    $('.' + dog.owner + '').append("<td>"+ dog.owner + "</td>")
-    $('.' + dog.owner + '').append("<td>"+ dog.name + "</td>")
-    $('.' + dog.owner + '').append("<td>"+ dog.preferences[0].favoriteFood + "</td>")
-    $('.' + dog.owner + '').append("<td>"+ dog.preferences[1].favoriteToy + "</td>")
 
-  })
+  $.each(gschoolDogs.dogs, function (i, dog) {
+  $('tbody').append("<tr class='" + dog.owner + "'></tr>");
+    $('.' + dog.owner).append("<td>" + dog.owner + "</td>");
+    $('.' + dog.owner).append("<td>" + dog.name + "</td>");
+    $('.' + dog.owner).append("<td>" + dog.preferences[0].favoriteFood + "</td>");
+    $('.' + dog.owner).append("<td>" + dog.preferences[1].favoriteToy + "</td>");
+
+  });
 });
 
